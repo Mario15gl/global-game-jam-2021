@@ -24,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
 
             GetComponent<Rigidbody>().AddForceAtPosition(moveDirection * speed, transform.position + forcePosition);
         }
+
+        if(Input.GetAxisRaw("Jump") > 0)
+        {
+            GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * speed, transform.position);
+        }
       
     }
 
