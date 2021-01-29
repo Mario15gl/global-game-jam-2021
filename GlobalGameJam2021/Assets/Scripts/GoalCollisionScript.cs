@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class GoalCollisionScript : MonoBehaviour
 {
-    public UnityEvent onPlayerCollision;
+    public UnityEvent OnPlayerCollision;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class GoalCollisionScript : MonoBehaviour
         // Check that the other collider is the player
         if ( other.name == "Player" ) // If the other object has a particular player component...
         {
-            onPlayerCollision?.Invoke();
+            OnPlayerCollision?.Invoke();
         }
     }
 }

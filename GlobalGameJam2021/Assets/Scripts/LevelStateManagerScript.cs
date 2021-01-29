@@ -23,6 +23,13 @@ public class LevelStateManagerScript : MonoBehaviour
         Debug.Log("Game WON");          // Print Debug Message
     }
 
+    // Set the LevelState to "LOSS"
+    public void SetPlayerLoose()
+    {
+        currentState = LevelState.LOSS;  // Update state
+        Debug.Log("Game LOST");          // Print Debug Message
+    }
+
     // Start is called before the first frame update
     void Start()
     {
