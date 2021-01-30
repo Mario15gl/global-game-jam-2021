@@ -28,9 +28,9 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<Rigidbody>().AddForceAtPosition(moveDirection * speed, transform.position + forcePosition);
         }
 
-        if(Input.GetAxisRaw("JumpPlayer") > 0)
+        if(Input.GetAxisRaw("JumpPlayer") > 0 )
         {
-            if (isJump == false)
+            if (isJump == false )
             {
                 GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * jumpValue, transform.position);
                 isJump = true;
@@ -44,12 +44,14 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleInput();
       
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        isJump = false;
+        if (Input.GetKey(KeyCode.Space) == false)
+        {
+            isJump = false;
+        }
     }
     
 
