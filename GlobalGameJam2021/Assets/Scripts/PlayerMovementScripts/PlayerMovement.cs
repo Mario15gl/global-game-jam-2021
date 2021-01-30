@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform cam;
 
     public float speed = 6;
+    public float jumpValue = 100;
+
+    bool isJump = false;
     
     void HandleInput()
     {
@@ -27,7 +30,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetAxisRaw("JumpPlayer") > 0)
         {
-            GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * speed, transform.position);
+            if (isJump == false)
+            {
+                GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * jumpValue, transform.position);
+                isJump = true;
+            }
         }
       
     }
@@ -36,7 +43,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         HandleInput();
+      
+        
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        isJump = false;
+    }
     
+
+
 }
