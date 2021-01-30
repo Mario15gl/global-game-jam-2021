@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class FirstPersonMovement : MonoBehaviour
 {
     public Transform cam;
+    public float moveScaleFactor = 8.0f;
 
-    public float speed = 6;
-    
     void HandleInput()
     {
+
+        
         float FrontBack = Input.GetAxisRaw("FrontBackForce");
         float LeftRight = Input.GetAxisRaw("LeftRightForce");
         Vector3 direction = new Vector3(LeftRight, 0, FrontBack);
-        Vector3 forcePosition = new Vector3(LeftRight, -0.5f, FrontBack * -1);
 
         if (direction.magnitude >= 0.1f)
         {
@@ -22,14 +22,17 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            GetComponent<Rigidbody>().AddForceAtPosition(moveDirection * speed, transform.position + forcePosition);
+            GetComponent<CharacterController>().Move(moveDirection/moveScaleFactor);
         }
 
-        if(Input.GetAxisRaw("Jump") > 0)
+        if (Input.GetAxisRaw("JumpPlayer") > 0)
         {
-            GetComponent<Rigidbody>().AddForceAtPosition(Vector3.up * speed, transform.position);
+            GetComponent<CharacterController>().Move(Vector3.up/ moveScaleFactor);
         }
-      
+        if (Input.GetAxisRaw("JumpPlayer") < 0)
+        {
+            GetComponent<CharacterController>().Move(Vector3.down / moveScaleFactor);
+        }
     }
 
     // Update is called once per frame
@@ -37,6 +40,4 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleInput();
     }
-
-    
 }
