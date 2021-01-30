@@ -48,9 +48,9 @@ public class RagdollToggle : MonoBehaviour {
         }
         
         // root
-        RigidBody.detectCollisions = !active;
+        //RigidBody.detectCollisions = !active;
         RigidBody.isKinematic = !active;
-        BoxCollider.enabled = !active;
+        //BoxCollider.enabled = !active;
     }
 
 }
