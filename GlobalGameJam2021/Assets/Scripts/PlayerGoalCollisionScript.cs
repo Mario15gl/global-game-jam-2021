@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GoalCollisionScript : MonoBehaviour
+public class PlayerGoalCollisionScript : MonoBehaviour
 {
     public UnityEvent OnPlayerCollision;
 

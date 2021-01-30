@@ -11,16 +11,12 @@ public class LevelCountdownScript : MonoBehaviour
     public UnityEvent OnCountdownFinished;
 
     private float _timeRemaining;
-    private float _elapsedTime;
 
     // Start is called before the first frame update
     void Start()
     {
         // Restart the countdown
         _timeRemaining = StartingTime;
-
-        // Set letter position offset
-        _elapsedTime = 0.0f;
     }
 
     // Update is called once per frame
