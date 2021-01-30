@@ -247,12 +247,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positions:
   - {x: 3, y: 5, z: 3}
-  - {x: 5, y: 5, z: 3}
-  - {x: 5, y: 5, z: 0}
-  speed: 5
-  timeToWait: 1
-  currentPosition: 0
-  isIdle: 0
+  - {x: 5, y: 6, z: 3}
+  - {x: 5, y: 7, z: 0}
+  speed: 4
+  timeToWait: 0
+  positionPoint: 0
 --- !u!65 &813824736
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -7,8 +7,9 @@ public class movingPlatforms : MonoBehaviour
     public Vector3[] positions;
     public float speed;
     public float timeToWait; //seconds
-    public int currentPosition = 0;
-    public bool isIdle = false;
+    private int currentPosition = 0;
+    private bool isIdle = false;
+    public float positionPoint = 0;
     // Start is called before the first frame update
     void Start()
     {
