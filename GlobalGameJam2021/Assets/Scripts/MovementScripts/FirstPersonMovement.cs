@@ -25,11 +25,11 @@ public class FirstPersonMovement : MonoBehaviour
             GetComponent<CharacterController>().Move(moveDirection/moveScaleFactor);
         }
 
-        if (Input.GetAxisRaw("Jump") > 0)
+        if (Input.GetAxisRaw("JumpPlayer") > 0)
         {
             GetComponent<CharacterController>().Move(Vector3.up/ moveScaleFactor);
         }
-        if (Input.GetAxisRaw("Jump") < 0)
+        if (Input.GetAxisRaw("JumpPlayer") < 0)
         {
             GetComponent<CharacterController>().Move(Vector3.down / moveScaleFactor);
         }
