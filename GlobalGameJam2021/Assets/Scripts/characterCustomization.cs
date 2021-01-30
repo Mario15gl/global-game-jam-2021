@@ -7,7 +7,7 @@ public class characterCustomization : MonoBehaviour
     public GameObject hat;
     public GameObject glasses;
     public GameObject cape;
-    public GameObject cameraHolder;
+
 
     bool hasHat;
     bool hasGlasses;
@@ -43,10 +43,6 @@ public class characterCustomization : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        cameraHolder.transform.Rotate(new Vector3(0, -20 * Time.deltaTime, 0), Space.Self);
-    }
     public void putHat()
     {
         if (hasHat == false)
