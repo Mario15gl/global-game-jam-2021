@@ -22,7 +22,7 @@ public class LevelStateManagerScript : MonoBehaviour
     // Collection of Player Spawn points
     public GameObject[] PlayerSpawnPoints;
 
-    // Reference to the Game-End text
+    // Reference to the Game-End text from UI
     public Text GameEndText;
 
     // GameEndText scale rate
@@ -41,6 +41,7 @@ public class LevelStateManagerScript : MonoBehaviour
     {
         currentState = LevelState.WIN;  // Update state
         GameEndText.text = "You Win!";
+        GameEndText.color = Color.green;
         PlayerMovement plyMovementComponent = PlayerObject.GetComponent<PlayerMovement>();
         plyMovementComponent.isEnabled = false;
         Debug.Log("Game WON");          // Print Debug Message
@@ -51,6 +52,7 @@ public class LevelStateManagerScript : MonoBehaviour
     {
         currentState = LevelState.LOSS;  // Update state
         GameEndText.text = "You Loose!";
+        GameEndText.color = Color.red;
         PlayerMovement plyMovementComponent = PlayerObject.GetComponent<PlayerMovement>();
         plyMovementComponent.isEnabled = false;
         Debug.Log("Game LOST");          // Print Debug Message
@@ -68,6 +70,9 @@ public class LevelStateManagerScript : MonoBehaviour
         // Update the game end text
         _gameEndTextScale = new Vector3(0.0f, 0.0f, 0.0f);
         GameEndText.transform.localScale = _gameEndTextScale;
+
+        // Restart the game text
+        GameEndText.color = Color.white;
     }
 
     // stateManager update function
