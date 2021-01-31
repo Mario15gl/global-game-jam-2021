@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class LevelCountdownScript : MonoBehaviour
 {
     public float StartingTime;
+
+    // Reference to the countdown timer in the UI
     public Text CountdownText;
+
     public UnityEvent OnCountdownFinished;
 
     private float _timeRemaining;
