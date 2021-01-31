@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class menu : MonoBehaviour
 
     public void StartGame()
     {
-        Application.LoadLevel("Character Customization");
+        SceneManager.LoadScene("Character Customization");
     }
 
     public void Controls()

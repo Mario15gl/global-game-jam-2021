@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 177962619149863507}
   - component: {fileID: 177962619149863506}
   - component: {fileID: 7018951148506434942}
+  - component: {fileID: 1041613918208142792}
   m_Layer: 0
   m_Name: LevelStateManager
   m_TagString: Untagged
@@ -46,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 0}
   PlayerSpawnPoints: []
+  GameEndText: {fileID: 0}
+  GameEndTextScaleRate: 0
 --- !u!114 &7018951148506434942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,3 +77,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1041613918208142792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177962619149863517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afbbe8c5e9153245b03e13a5e06ea60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
