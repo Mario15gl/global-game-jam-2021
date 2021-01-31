@@ -33,6 +33,8 @@ public class LevelStateManagerScript : MonoBehaviour
 
     private float _gameOverTimeElapsed = 0;
 
+    public string NextScene = "Menu";
+
     // Level State enum
     LevelState currentState;
 
@@ -96,7 +98,7 @@ public class LevelStateManagerScript : MonoBehaviour
             // Time elapsed check
             if(_gameOverTimeElapsed >= 5.0f) // If the time passed since the game has finished surpassed 5 seconds...
             {
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene(NextScene);
             }
         }
     }
