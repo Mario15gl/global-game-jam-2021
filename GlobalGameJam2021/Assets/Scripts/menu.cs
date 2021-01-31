@@ -19,7 +19,7 @@ public class menu : MonoBehaviour
 
     public void StartGame()
     {
-        //go to game scene
+        Application.LoadLevel("Character Customization");
     }
 
     public void Controls()
