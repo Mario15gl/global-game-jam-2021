@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Transform cam;
 
+    public bool isEnabled = true;
     public float speed = 6;
     public float jumpValue = 100;
 
@@ -42,8 +43,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleInput();
-      
+        // Check to see if the user should be able to move the sock
+        if (isEnabled) // If the sock should move...
+        {
+            HandleInput(); // Handle player input
+        }
     }
 
     private void OnTriggerEnter(Collider other)
