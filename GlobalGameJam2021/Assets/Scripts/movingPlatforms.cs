@@ -38,6 +38,21 @@ public class movingPlatforms : MonoBehaviour
                     StartCoroutine(stop());
                 }
             }
+            positionPoint = Mathf.Lerp(positionPoint, 100, speed * Time.deltaTime);
+            if (positionPoint > 90)
+            {
+                if (currentPosition + 1 == positions.Length)
+                {
+                    currentPosition = 0;
+                    StartCoroutine(stop());
+                }
+                else
+                {
+                    currentPosition++;
+                    StartCoroutine(stop());
+                }
+                positionPoint = 0;
+            }
         }
     }
     IEnumerator stop()
