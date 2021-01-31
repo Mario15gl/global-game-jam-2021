@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
         float FrontBack = Input.GetAxisRaw("FrontBackForce");
         float LeftRight = Input.GetAxisRaw("LeftRightForce");
         Vector3 direction = new Vector3(LeftRight, 0, FrontBack);
-        Vector3 forcePosition = new Vector3(LeftRight, -0.5f, FrontBack * -1);
+        Vector3 forcePosition = new Vector3(0.0f, -0.5f, 0.0f);
 
         if (direction.magnitude >= 0.1f)
         {
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-            GetComponent<Rigidbody>().AddForceAtPosition(moveDirection * speed, transform.position + forcePosition);
+            GetComponent<Rigidbody>().AddForceAtPosition(moveDirection * speed, transform.position );
         }
 
         if(Input.GetAxisRaw("JumpPlayer") > 0 )
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKey(KeyCode.Space) == false)
+        if (Input.GetKey(KeyCode.Space) == false && other.gameObject.tag != ("Player"))
         {
             isJump = false;
         }
