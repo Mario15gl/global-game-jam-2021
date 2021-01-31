@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177962619149863507}
   - component: {fileID: 177962619149863506}
+  - component: {fileID: 7018951148506434942}
   m_Layer: 0
   m_Name: LevelStateManager
   m_TagString: Untagged
@@ -45,3 +46,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerObject: {fileID: 0}
   PlayerSpawnPoints: []
+--- !u!114 &7018951148506434942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177962619149863517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c631078707d7d8645a512f5b6b80fcb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingTime: 15
+  CountdownText: {fileID: 0}
+  OnCountdownFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 177962619149863506}
+        m_MethodName: SetPlayerLoose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
