@@ -100,4 +100,9 @@ public class characterCustomization : MonoBehaviour
             }
         }
     }
+
+    public void BeginGame()
+    {
+        Application.LoadLevel("Living Room");
+    }
 }
