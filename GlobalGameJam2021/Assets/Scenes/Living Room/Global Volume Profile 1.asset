@@ -29,7 +29,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
   m_Name: WhiteBalance
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
@@ -250,10 +250,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 1
-    m_Value: 5.35
+    m_Value: 1.09
   contrast:
     m_OverrideState: 1
-    m_Value: 27.27
+    m_Value: 26.43
     min: -100
     max: 100
   colorFilter:
@@ -269,7 +269,7 @@ MonoBehaviour:
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 14.44
+    m_Value: 8.9
     min: -100
     max: 100
 --- !u!114 &6731367463880628309
@@ -474,9 +474,9 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   hueVsHue:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 1
+      <length>k__BackingField: 3
       m_Loop: 1
       m_ZeroValue: 0.5
       m_Range: 1
@@ -484,8 +484,26 @@ MonoBehaviour:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.21661238
-          value: 0.5016835
+          time: 0.64648116
+          value: 0.49830508
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.69394433
+          value: 0.5457627
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.705401
+          value: 0.48813558
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -498,7 +516,7 @@ MonoBehaviour:
   hueVsSat:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 3
+      <length>k__BackingField: 7
       m_Loop: 1
       m_ZeroValue: 0.5
       m_Range: 1
@@ -506,8 +524,8 @@ MonoBehaviour:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.22913256
-          value: 0.42372882
+          time: 0.016366612
+          value: 0.45423728
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -515,8 +533,44 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.7545008
-          value: 0.023728788
+          time: 0.032733224
+          value: 0.34576273
+          inSlope: -0.038579028
+          outSlope: -0.038579028
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.12929623
+          value: 0.5186441
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.14402619
+          value: 0.25084746
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.28968903
+          value: 0.45762712
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.7789507
+          value: 0
           inSlope: 0.009089826
           outSlope: 0.009089826
           tangentMode: 0
