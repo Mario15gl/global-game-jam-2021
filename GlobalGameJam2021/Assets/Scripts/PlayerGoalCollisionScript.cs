@@ -8,6 +8,8 @@ public class PlayerGoalCollisionScript : MonoBehaviour
 {
     public UnityEvent OnPlayerCollision;
 
+    public GameObject PlayerObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class PlayerGoalCollisionScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check that the other collider is the player
-        if ( other.name == "Player" ) // If the other object has a particular player component...
+        if ( other.name == PlayerObject.name) // If the other object has a particular player component...
         {
             OnPlayerCollision?.Invoke();
         }
