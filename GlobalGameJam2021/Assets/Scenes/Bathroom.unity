@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -939,7 +939,7 @@ PrefabInstance:
     - target: {fileID: 962001228934891127, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000010681153
+      value: 0.000010681154
       objectReference: {fileID: 0}
     - target: {fileID: 962001228934891127, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
@@ -948,8 +948,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 962001228934891127, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9965927
+      objectReference: {fileID: 0}
+    - target: {fileID: 962001228934891127, guid: 5ee9dda8fc3180840b029c3ca65a711d,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.08248052
+      objectReference: {fileID: 0}
+    - target: {fileID: 962001228934891127, guid: 5ee9dda8fc3180840b029c3ca65a711d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0000040690065
       objectReference: {fileID: 0}
     - target: {fileID: 962001228934891127, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
@@ -1019,7 +1029,7 @@ PrefabInstance:
     - target: {fileID: 1142761506125427648, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000006103516
+      value: 0.0000061035166
       objectReference: {fileID: 0}
     - target: {fileID: 1142761506125427648, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
@@ -1028,18 +1038,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1142761506125427648, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999154
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142761506125427648, guid: 5ee9dda8fc3180840b029c3ca65a711d,
+        type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.013005627
+      value: 0.013005629
       objectReference: {fileID: 0}
     - target: {fileID: 1142761506125427648, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000004078738
+      value: -0.000004083483
       objectReference: {fileID: 0}
     - target: {fileID: 1142761506125427648, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000053051036
+      value: 0.000000053112753
       objectReference: {fileID: 0}
     - target: {fileID: 3967203681394236547, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
@@ -1074,12 +1089,17 @@ PrefabInstance:
     - target: {fileID: 8790495138850611981, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000006103516
+      value: 0.0000061035166
       objectReference: {fileID: 0}
     - target: {fileID: 8790495138850611981, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0000009155274
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790495138850611981, guid: 5ee9dda8fc3180840b029c3ca65a711d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9988663
       objectReference: {fileID: 0}
     - target: {fileID: 8790495138850611981, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
@@ -1790,6 +1810,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 177962619149863506, guid: 4dc847e8a426ba74285d99a3a7c5b7f1,
+        type: 3}
+      propertyPath: NextScene
+      value: Kitchen
+      objectReference: {fileID: 0}
     - target: {fileID: 177962619149863506, guid: 4dc847e8a426ba74285d99a3a7c5b7f1,
         type: 3}
       propertyPath: GameEndText

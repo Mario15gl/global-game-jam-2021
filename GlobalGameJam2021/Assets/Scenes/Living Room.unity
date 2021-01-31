@@ -143,6 +143,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 177962619149863506, guid: 4dc847e8a426ba74285d99a3a7c5b7f1,
         type: 3}
+      propertyPath: NextScene
+      value: Bedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 177962619149863506, guid: 4dc847e8a426ba74285d99a3a7c5b7f1,
+        type: 3}
       propertyPath: GameEndText
       value: 
       objectReference: {fileID: 1323053916}
