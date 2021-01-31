@@ -59,9 +59,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKey(KeyCode.Space) == false && other.gameObject.tag != ("Player") && isJump == true)
+        if (Input.GetKey(KeyCode.Space) == false && other.gameObject.tag != ("Player"))
         {
             isJump = false;
         }
