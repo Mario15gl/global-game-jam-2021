@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7913818381837508256
+--- !u!114 &-7033308914187385787
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,15 +9,72 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
-  m_Name: Tonemapping
+  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
+  m_Name: Vignette
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
-  mode:
+  color:
     m_OverrideState: 1
-    m_Value: 1
---- !u!114 &-5632873478243513011
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  center:
+    m_OverrideState: 0
+    m_Value: {x: 0.5, y: 0.5}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.27
+    min: 0
+    max: 1
+  smoothness:
+    m_OverrideState: 1
+    m_Value: 0.5
+    min: 0.01
+    max: 1
+  rounded:
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &-4813859557536858918
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  postExposure:
+    m_OverrideState: 1
+    m_Value: 1.41
+  contrast:
+    m_OverrideState: 1
+    m_Value: 26.43
+    min: -100
+    max: 100
+  colorFilter:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  hueShift:
+    m_OverrideState: 0
+    m_Value: 0
+    min: -180
+    max: 180
+  saturation:
+    m_OverrideState: 0
+    m_Value: 8.9
+    min: -100
+    max: 100
+--- !u!114 &-3188414422421017088
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +98,38 @@ MonoBehaviour:
     m_Value: -0.66
     min: -100
     max: 100
---- !u!114 &-1998838589333116167
+--- !u!114 &-711801069241685764
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
+  m_Name: SplitToning
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  shadows:
+    m_OverrideState: 1
+    m_Value: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  highlights:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    hdr: 0
+    showAlpha: 0
+    showEyeDropper: 1
+  balance:
+    m_OverrideState: 0
+    m_Value: 0
+    min: -100
+    max: 100
+--- !u!114 &-454489212278804735
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,20 +186,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: Global Volume Profile 1
+  m_Name: Box Volume Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 4678768392769525814}
-  - {fileID: -1998838589333116167}
-  - {fileID: 2956063826496487766}
-  - {fileID: 6731367463880628309}
-  - {fileID: 2393241443484888320}
-  - {fileID: -5632873478243513011}
-  - {fileID: -7913818381837508256}
-  - {fileID: 8686966418760056327}
-  - {fileID: 1370568488473434346}
-  - {fileID: 1337192187496499928}
---- !u!114 &1337192187496499928
+  - {fileID: -4813859557536858918}
+  - {fileID: -454489212278804735}
+  - {fileID: 6524732365479325259}
+  - {fileID: -7033308914187385787}
+  - {fileID: -3188414422421017088}
+  - {fileID: 1886664309255180038}
+  - {fileID: 6657328101574869228}
+  - {fileID: 2305427073719842402}
+  - {fileID: -711801069241685764}
+--- !u!114 &1886664309255180038
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,29 +207,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
-  m_Name: SplitToning
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
-  shadows:
+  mode:
     m_OverrideState: 1
-    m_Value: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
-  highlights:
-    m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
-  balance:
-    m_OverrideState: 0
-    m_Value: 0
-    min: -100
-    max: 100
---- !u!114 &1370568488473434346
+    m_Value: 1
+--- !u!114 &2305427073719842402
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,46 +238,7 @@ MonoBehaviour:
   gain:
     m_OverrideState: 0
     m_Value: {x: 0.82960176, y: 0.9828062, z: 1, w: 0}
---- !u!114 &2393241443484888320
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
-  m_Name: ShadowsMidtonesHighlights
-  m_EditorClassIdentifier: 
-  active: 0
-  m_AdvancedMode: 0
-  shadows:
-    m_OverrideState: 0
-    m_Value: {x: 0.92677796, y: 0.9719961, z: 1, w: 1}
-  midtones:
-    m_OverrideState: 0
-    m_Value: {x: 1, y: 0.7190844, z: 0.86321354, w: 0}
-  highlights:
-    m_OverrideState: 0
-    m_Value: {x: 0.77336323, y: 0.63027763, z: 1, w: 0}
-  shadowsStart:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  shadowsEnd:
-    m_OverrideState: 0
-    m_Value: 0.3
-    min: 0
-  highlightsStart:
-    m_OverrideState: 0
-    m_Value: 0.55
-    min: 0
-  highlightsEnd:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
---- !u!114 &2956063826496487766
+--- !u!114 &6524732365479325259
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,81 +268,7 @@ MonoBehaviour:
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
---- !u!114 &4678768392769525814
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
-  m_Name: ColorAdjustments
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  postExposure:
-    m_OverrideState: 1
-    m_Value: 1.41
-  contrast:
-    m_OverrideState: 1
-    m_Value: 26.43
-    min: -100
-    max: 100
-  colorFilter:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 1
-    showAlpha: 0
-    showEyeDropper: 1
-  hueShift:
-    m_OverrideState: 0
-    m_Value: -0
-    min: -180
-    max: 180
-  saturation:
-    m_OverrideState: 0
-    m_Value: 8.9
-    min: -100
-    max: 100
---- !u!114 &6731367463880628309
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
-  m_Name: Vignette
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  color:
-    m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
-  center:
-    m_OverrideState: 0
-    m_Value: {x: 0.5, y: 0.5}
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.27
-    min: 0
-    max: 1
-  smoothness:
-    m_OverrideState: 1
-    m_Value: 0.5
-    min: 0.01
-    max: 1
-  rounded:
-    m_OverrideState: 0
-    m_Value: 0
---- !u!114 &8686966418760056327
+--- !u!114 &6657328101574869228
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}

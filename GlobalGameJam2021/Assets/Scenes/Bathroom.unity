@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1109,12 +1109,12 @@ PrefabInstance:
     - target: {fileID: 8790495138850611981, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000040804375
+      value: -0.000004076141
       objectReference: {fileID: 0}
     - target: {fileID: 8790495138850611981, guid: 5ee9dda8fc3180840b029c3ca65a711d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00000019446158
+      value: 0.0000001942568
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ee9dda8fc3180840b029c3ca65a711d, type: 3}
@@ -2219,7 +2219,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854697503}
-  m_LocalRotation: {x: 0.047603, y: -0.0000000042967514, z: 2.047704e-10, w: 0.9988663}
+  m_LocalRotation: {x: 0.047603, y: 0.0000000042967514, z: -2.047704e-10, w: 0.9988663}
   m_LocalPosition: {x: -1.1553868, y: 1.8395499, z: -9.9889965}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2383,6 +2383,68 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.46485353, y: 0.7051584, z: 1.1461203}
   m_Center: {x: -0.06915138, y: -0.14742072, z: -0.044728298}
+--- !u!1 &2028750552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028750553}
+  - component: {fileID: 2028750555}
+  - component: {fileID: 2028750554}
+  m_Layer: 0
+  m_Name: Box Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2028750553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028750552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.574379, y: -2.0780106, z: -29.965723}
+  m_LocalScale: {x: 151.81793, y: 151.81793, z: 151.81793}
+  m_Children: []
+  m_Father: {fileID: 1483963265878676275}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2028750554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028750552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 0
+  priority: 0
+  blendDistance: 1
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 40aaa4c8caf25a645b53ced77d05136e, type: 2}
+--- !u!65 &2028750555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028750552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2072975506
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,72 +2489,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &8443135029084584152
-PrefabInstance:
+--- !u!4 &1483963265878676275
+Transform:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 14.071784
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.8571835
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 26.940205
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876971, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7040272085281876972, guid: 03716c4818ce8df41bd0c39ae4c1f0d0,
-        type: 3}
-      propertyPath: m_Name
-      value: Post-Processing-Bathroom
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 03716c4818ce8df41bd0c39ae4c1f0d0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483963265878676276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.071784, y: 7.8571835, z: 26.940205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2028750553}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1483963265878676276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483963265878676275}
+  m_Layer: 0
+  m_Name: Post-Processing-Bathroom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
