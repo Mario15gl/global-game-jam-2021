@@ -49,17 +49,20 @@ public class characterCustomization : MonoBehaviour
     }
     public void putHat()
     {
-        if (hasHat == false)
+        if (hasCape == false)
         {
-            hasHat = true;
-            hat.SetActive(true);
-            PlayerPrefs.SetInt("hat", 1);
-        }
-        else 
-        {
-            hasHat = false;
-            hat.SetActive(false);
-            PlayerPrefs.SetInt("hat", 0);
+            if (hasHat == false)
+            {
+                hasHat = true;
+                hat.SetActive(true);
+                PlayerPrefs.SetInt("hat", 1);
+            }
+            else
+            {
+                hasHat = false;
+                hat.SetActive(false);
+                PlayerPrefs.SetInt("hat", 0);
+            }
         }
     }
 
@@ -81,17 +84,20 @@ public class characterCustomization : MonoBehaviour
 
     public void putCape()
     {
-        if (hasCape == false)
+        if (hasHat == false)
         {
-            hasCape = true;
-            cape.SetActive(true);
-            PlayerPrefs.SetInt("cape", 1);
-        }
-        else
-        {
-            hasCape = false;
-            cape.SetActive(false);
-            PlayerPrefs.SetInt("cape", 0);
+            if (hasCape == false)
+            {
+                hasCape = true;
+                cape.SetActive(true);
+                PlayerPrefs.SetInt("cape", 1);
+            }
+            else
+            {
+                hasCape = false;
+                cape.SetActive(false);
+                PlayerPrefs.SetInt("cape", 0);
+            }
         }
     }
 }
