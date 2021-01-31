@@ -46,28 +46,4 @@ public class LevelStateManagerScript : MonoBehaviour
         // Spawn Player at one of the spawn points
         PlayerObject.transform.position = PlayerSpawnPoints[Random.Range(0, PlayerSpawnPoints.Length)].transform.position;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Update paths based on current state enum
-        switch (currentState)
-        {
-        case LevelState.INTRO:
-            // INTRO update
-            break;
-
-        case LevelState.GAMEPLAY:
-            // GAMEPLAY update
-            break;
-
-        case LevelState.WIN:
-            // WIN update
-            break;
-
-        case LevelState.LOSS:
-            // LOSS update
-            break;
-        }
-    }
 }
